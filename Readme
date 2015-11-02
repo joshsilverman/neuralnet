@@ -1,0 +1,9 @@
+You are given a training set containing the handwritten images of three digits (3, 5, 8). Train a feedforward neural network with one hidden layer of size 3 to learn representations of those digits.  Try using (a) Linear transform function and (b) Sigmoid transform function for the hidden layer.  Change the size of hidden layer to 6 and 9, and retrain the networks.
+
+Submit:
+
+(1) Your codes
+
+(2) The image visualization of the input weights of every neuron in the hidden layer in the trained neural networks.  Put all images in one document (PDF or Word) and submit the document. Please clearly label every image.
+
+Late penalty 15 points off. Cutoff date 11/4/2015 23:55 pm.
