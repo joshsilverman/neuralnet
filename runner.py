@@ -19,10 +19,10 @@ paths = vectorizer.get_image_paths()
 # Try using (a) Linear transform function                  #
 ############################################################ 
 
-# net_3lin = NeuralNet(3, 'linear')
-# net_3lin.train(paths)
-# weights = net_3lin.input_weights_of_hidden_layer()
-# vectorizer.vectors_to_images(weights)
+net_3lin = NeuralNet(3, 'linear')
+net_3lin.train(paths)
+weights = net_3lin.input_weights_of_hidden_layer()
+vectorizer.vectors_to_images(weights, '3_hidden_layer_linear')
 
 ############################################################
 # (b) Sigmoid transform function for the hidden layer      #

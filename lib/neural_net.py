@@ -30,7 +30,10 @@ class NeuralNet:
     if self.hidden_type == 'sigmoid':
       self.hiddenLayer = SigmoidLayer(self.hidden_neuron_num, name='hidden')
     else:
+      # I found I had to overwrite the output layer to sigmoid to get the 
+      # hidden layer to work as linear
       self.hiddenLayer = LinearLayer(self.hidden_neuron_num, name='hidden')
+      self.outLayer = SigmoidLayer(784, name='out')
 
     self.net.addInputModule(self.inLayer)
     self.net.addModule(self.hiddenLayer)
@@ -52,7 +55,7 @@ class NeuralNet:
   def train(self, paths):
     for path in paths:
       vector = self.vectorizer.image_to_vector(path) 
-      vector = [el / 255.0 for el in vector]
+      vector = numpy.float64([el / 255.0 for el in vector])
       self.samples.addSample(vector, vector)
 
     trainer = BackpropTrainer(self.net, self.samples, learningrate=.5, lrdecay=0.98)
