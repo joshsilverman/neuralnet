@@ -1,0 +1,5 @@
+PIL==1.1.7
+gnureadline==6.3.3
+ipython==3.1.0
+numpy==1.9.0
+PyBrain==0.3
