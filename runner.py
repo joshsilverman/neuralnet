@@ -1,5 +1,5 @@
-import sys
-sys.path.append("/Users/joshsilverman/Dropbox/Apps/ai-hw4/lib")
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), "lib"))
 
 from IPython import embed
 from neural_net import NeuralNet

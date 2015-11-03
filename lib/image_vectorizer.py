@@ -4,9 +4,8 @@ import numpy
 import sys
 import os
 
-sys.path.append("/Users/joshsilverman/Dropbox/Apps/ai-hw4")
-sys.path.append("/Users/joshsilverman/Dropbox/Apps/ai-hw4/lib")
-sys.path.append("/Users/joshsilverman/Dropbox/Apps/ai-hw4/images")
+sys.path.append(os.path.join(os.path.dirname(__file__), "lib"))
+sys.path.append(os.path.join(os.path.dirname(__file__), "images"))
 
 class ImageVectorizer:
   def get_image_paths(self):
