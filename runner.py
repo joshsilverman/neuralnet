@@ -50,3 +50,12 @@ net_9sig = NeuralNet(9, 'sigmoid')
 net_9sig.train(paths)
 weights = net_9sig.input_weights_of_hidden_layer()
 vectorizer.vectors_to_images(weights, '9_hidden_layer_sigmoid')
+
+############################################################
+# Change the size of hidden layer to 15 and retrain        #
+############################################################
+
+net_15sig = NeuralNet(15, 'sigmoid')
+net_15sig.train(paths)
+weights = net_15sig.input_weights_of_hidden_layer()
+vectorizer.vectors_to_images(weights, '15_hidden_layer_sigmoid')
