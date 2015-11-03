@@ -27,7 +27,6 @@ class NeuralNet:
     self.inLayer = LinearLayer(784, name='in')
     self.outLayer = LinearLayer(784, name='out')
 
-    print self.hidden_type
     if self.hidden_type == 'sigmoid':
       self.hiddenLayer = SigmoidLayer(self.hidden_neuron_num, name='hidden')
     else:

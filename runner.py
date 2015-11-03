@@ -1,9 +1,10 @@
-from IPython import embed
 import sys
+sys.path.append("/Users/joshsilverman/Dropbox/Apps/ai-hw4/lib")
+
+from IPython import embed
 from neural_net import NeuralNet
 from image_vectorizer import ImageVectorizer
 
-sys.path.append("/Users/joshsilverman/Dropbox/Apps/ai-hw4/lib")
 
 vectorizer = ImageVectorizer()
 paths = vectorizer.get_image_paths()
